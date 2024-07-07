@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>偶数及び奇数のチェック</title>
+</head>
+
+<body>
+    <h1>偶数及び奇数のチェック</h1>
+    <label for="inputNumber">数字を入力してください。</label>
+    <input type="text" id="inputNumber">
+    <button onclick="checkNumber()">確認</button>
+    <p id="result"></p>
+
+    <script>
+        function checkNumber() {
+            let number = parseInt(document.getElementById("inputNumber").value);
+            let result;
+            if (number % 2 === 0) {
+                result = `${number}は偶数です。`;
+            } else {
+                result = `${number}は奇数です。`;
+            }
+            document.getElementById("result").innerText = result;
+        }
+    </script>
+</body>
+
+</html>
