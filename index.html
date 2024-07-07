@@ -18,7 +18,10 @@
         function checkNumber() {
             let number = parseInt(document.getElementById("inputNumber").value);
             let result;
-            if (number % 2 === 0) {
+            if (isNaN(number)) {
+                result = `有効な数値を入力してください。`;
+            }
+            else if (number % 2 === 0) {
                 result = `${number}は偶数です。`;
             } else {
                 result = `${number}は奇数です。`;
